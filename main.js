@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
 /* ---------- Shared helpers ---------- */
 
 const easingStandard = "cubic-bezier(0.22, 0.61, 0.36, 1)";
+// Provides visual breathing room below the fixed navigation after smooth scrolling.
+const SCROLL_PADDING = 8;
 
 function isDesktopViewport() {
   return window.matchMedia("(min-width: 64rem)").matches;
@@ -116,7 +118,8 @@ function initSmoothScrollLinks() {
       event.preventDefault();
 
       const navOffset = navElement ? navElement.getBoundingClientRect().height : 0;
-      const targetTop = targetElement.getBoundingClientRect().top + window.scrollY - navOffset + 8;
+      const targetTop =
+        targetElement.getBoundingClientRect().top + window.scrollY - navOffset + SCROLL_PADDING;
 
       window.scrollTo({
         top: Math.max(0, targetTop),
@@ -374,9 +377,8 @@ function injectDogPreferenceFields(formGridElement, dogCountInput) {
   dogChoiceField.className =
     "reservation-form__field reservation-form__field--full reservation-form__field--dog-choice";
   dogChoiceField.innerHTML = `
-		<span class="reservation-form__label">Bringing a dog companion?</span>
+    <label class="reservation-form__label" id="dog-choice-label">Bringing a dog companion?</label>
 		<div class="reservation-form__radio-group" role="radiogroup" aria-labelledby="dog-choice-label">
-			<span id="dog-choice-label" class="visually-hidden">Bringing a dog companion?</span>
 			<label class="reservation-form__radio-option" for="dog-choice-yes">
 				<input type="radio" id="dog-choice-yes" name="bringingDog" value="yes" />
 				Yes
