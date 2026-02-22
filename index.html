@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Barkside Dog Café in Victoria, BC — premium coffee, artisan bites, and a cozy space for dogs and their humans."
+    />
+    <meta name="theme-color" content="#2a1a14" />
+    <title>Barkside Dog Café | Victoria, BC</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body class="site-body">
+    <a class="site-body__skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header" id="top">
+      <nav class="site-nav" aria-label="Primary">
+        <div class="site-nav__inner">
+          <a class="site-nav__brand" href="#top" aria-label="Barkside Dog Café home">
+            <span class="site-nav__brand-mark" aria-hidden="true">🐾</span>
+            <span class="site-nav__brand-text">Barkside Dog Café</span>
+          </a>
+
+          <button
+            class="site-nav__toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav-menu"
+            aria-label="Toggle navigation menu"
+          >
+            <span class="site-nav__toggle-line" aria-hidden="true"></span>
+            <span class="site-nav__toggle-line" aria-hidden="true"></span>
+            <span class="site-nav__toggle-line" aria-hidden="true"></span>
+          </button>
+
+          <ul class="site-nav__menu" id="site-nav-menu">
+            <li class="site-nav__item"><a class="site-nav__link" href="#menu">Menu</a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="#dogs">Meet the Dogs</a></li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#reservations">Reservations</a>
+            </li>
+            <li class="site-nav__item"><a class="site-nav__link" href="#visit">Visit</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__media" aria-hidden="true"></div>
+        <div class="hero__overlay" aria-hidden="true"></div>
+        <div class="hero__content">
+          <p class="hero__eyebrow">Victoria, British Columbia</p>
+          <h1 class="hero__title" id="hero-title">
+            Refined Coffee Culture,
+            <span class="hero__title-emphasis">Tail-Wagging Welcome.</span>
+          </h1>
+          <p class="hero__lead">
+            An elegant dog-friendly café experience with expertly roasted coffee, seasonal plates,
+            and the city’s most charming four-legged regulars.
+          </p>
+          <div class="hero__actions">
+            <a class="hero__cta hero__cta--primary" href="#reservations">Book a Table</a>
+            <a class="hero__cta hero__cta--secondary" href="#menu">Explore Menu</a>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main class="site-main" id="main-content">
+      <section class="menu-section" id="menu" aria-labelledby="menu-heading">
+        <div class="menu-section__inner">
+          <header class="menu-section__header">
+            <p class="menu-section__eyebrow">Curated Selection</p>
+            <h2 class="menu-section__title" id="menu-heading">Café Menu</h2>
+            <p class="menu-section__intro">
+              Thoughtfully crafted offerings for every guest — from espresso classics to artisan
+              brunch and premium canine treats.
+            </p>
+          </header>
+
+          <div class="menu-filter" role="toolbar" aria-label="Filter menu categories">
+            <button
+              class="menu-filter__button menu-filter__button--active"
+              type="button"
+              data-filter="all"
+            >
+              All
+            </button>
+            <button class="menu-filter__button" type="button" data-filter="coffee">Coffee</button>
+            <button class="menu-filter__button" type="button" data-filter="food">Food</button>
+            <button class="menu-filter__button" type="button" data-filter="dog-treats">
+              Dog Treats
+            </button>
+          </div>
+
+          <div class="menu-grid" aria-live="polite">
+            <article class="menu-card" data-category="coffee">
+              <h3 class="menu-card__title">Espresso No. 7</h3>
+              <p class="menu-card__description">Dark chocolate notes with a velvet crema finish.</p>
+              <p class="menu-card__price">$4.50</p>
+            </article>
+
+            <article class="menu-card" data-category="coffee">
+              <h3 class="menu-card__title">Burnt Orange Mocha</h3>
+              <p class="menu-card__description">House mocha, orange zest, and steamed oat milk.</p>
+              <p class="menu-card__price">$6.75</p>
+            </article>
+
+            <article class="menu-card" data-category="food">
+              <h3 class="menu-card__title">West Coast Croissant Melt</h3>
+              <p class="menu-card__description">Aged cheddar, smoked turkey, and herb aioli.</p>
+              <p class="menu-card__price">$13.50</p>
+            </article>
+
+            <article class="menu-card" data-category="food">
+              <h3 class="menu-card__title">Truffle Mushroom Toast</h3>
+              <p class="menu-card__description">
+                Sourdough, whipped ricotta, and black truffle oil.
+              </p>
+              <p class="menu-card__price">$14.00</p>
+            </article>
+
+            <article class="menu-card" data-category="dog-treats">
+              <h3 class="menu-card__title">Peanut Butter Pup Bites</h3>
+              <p class="menu-card__description">Oven-baked with oat flour and banana.</p>
+              <p class="menu-card__price">$5.00</p>
+            </article>
+
+            <article class="menu-card" data-category="dog-treats">
+              <h3 class="menu-card__title">Barkside Bone Broth Bowl</h3>
+              <p class="menu-card__description">Warm beef broth with carrot and parsley garnish.</p>
+              <p class="menu-card__price">$6.25</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="dogs-section" id="dogs" aria-labelledby="dogs-heading">
+        <div class="dogs-section__inner">
+          <header class="dogs-section__header">
+            <p class="dogs-section__eyebrow">Resident Pack</p>
+            <h2 class="dogs-section__title" id="dogs-heading">Meet the Dogs</h2>
+            <p class="dogs-section__intro">
+              Our beloved in-house companions each bring their own personality to Barkside.
+            </p>
+          </header>
+
+          <div class="dogs-gallery">
+            <article class="dog-profile">
+              <figure class="dog-profile__figure">
+                <img
+                  class="dog-profile__image"
+                  src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=900&q=80"
+                  alt="Milo, a caramel Cocker Spaniel, lounging on a café bench"
+                  loading="lazy"
+                />
+                <figcaption class="dog-profile__caption">
+                  <h3 class="dog-profile__name">Milo</h3>
+                  <p class="dog-profile__trait">The social charmer</p>
+                </figcaption>
+              </figure>
+              <p class="dog-profile__bio">
+                Milo greets every guest like an old friend and insists on supervising latte art from
+                a respectful distance.
+              </p>
+            </article>
+
+            <article class="dog-profile">
+              <figure class="dog-profile__figure">
+                <img
+                  class="dog-profile__image"
+                  src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=900&q=80"
+                  alt="Juniper, a black Labrador, resting near a café window"
+                  loading="lazy"
+                />
+                <figcaption class="dog-profile__caption">
+                  <h3 class="dog-profile__name">Juniper</h3>
+                  <p class="dog-profile__trait">The gentle observer</p>
+                </figcaption>
+              </figure>
+              <p class="dog-profile__bio">
+                Juniper prefers sunny corners, soft jazz, and quietly keeping watch over the brunch
+                crowd.
+              </p>
+            </article>
+
+            <article class="dog-profile">
+              <figure class="dog-profile__figure">
+                <img
+                  class="dog-profile__image"
+                  src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=900&q=80"
+                  alt="Maple, a fluffy mixed-breed dog, sitting with a bright collar"
+                  loading="lazy"
+                />
+                <figcaption class="dog-profile__caption">
+                  <h3 class="dog-profile__name">Maple</h3>
+                  <p class="dog-profile__trait">The playful ambassador</p>
+                </figcaption>
+              </figure>
+              <p class="dog-profile__bio">
+                Maple is famous for enthusiastic tail wags and expertly timed requests for the house
+                biscuit.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="reservation-section" id="reservations" aria-labelledby="reservations-heading">
+        <div class="reservation-section__inner">
+          <header class="reservation-section__header">
+            <p class="reservation-section__eyebrow">Reserve Your Spot</p>
+            <h2 class="reservation-section__title" id="reservations-heading">Make a Reservation</h2>
+            <p class="reservation-section__intro">
+              Plan your visit for a relaxed, elevated café experience for both you and your pup.
+            </p>
+          </header>
+
+          <form class="reservation-form" id="reservation-form" novalidate>
+            <div class="reservation-form__grid">
+              <div class="reservation-form__field">
+                <label class="reservation-form__label" for="guest-name">Full Name</label>
+                <input
+                  class="reservation-form__input"
+                  type="text"
+                  id="guest-name"
+                  name="guestName"
+                  autocomplete="name"
+                  required
+                  minlength="2"
+                  maxlength="100"
+                  placeholder="Your full name"
+                />
+                <p class="reservation-form__error" id="guest-name-error" aria-live="polite"></p>
+              </div>
+
+              <div class="reservation-form__field">
+                <label class="reservation-form__label" for="guest-email">Email Address</label>
+                <input
+                  class="reservation-form__input"
+                  type="email"
+                  id="guest-email"
+                  name="guestEmail"
+                  autocomplete="email"
+                  required
+                  placeholder="you@example.com"
+                />
+                <p class="reservation-form__error" id="guest-email-error" aria-live="polite"></p>
+              </div>
+
+              <div class="reservation-form__field">
+                <label class="reservation-form__label" for="reservation-date">Date</label>
+                <input
+                  class="reservation-form__input"
+                  type="date"
+                  id="reservation-date"
+                  name="reservationDate"
+                  required
+                />
+                <p
+                  class="reservation-form__error"
+                  id="reservation-date-error"
+                  aria-live="polite"
+                ></p>
+              </div>
+
+              <div class="reservation-form__field">
+                <label class="reservation-form__label" for="reservation-time">Time</label>
+                <input
+                  class="reservation-form__input"
+                  type="time"
+                  id="reservation-time"
+                  name="reservationTime"
+                  required
+                />
+                <p
+                  class="reservation-form__error"
+                  id="reservation-time-error"
+                  aria-live="polite"
+                ></p>
+              </div>
+
+              <div class="reservation-form__field">
+                <label class="reservation-form__label" for="guest-count">Guests</label>
+                <input
+                  class="reservation-form__input"
+                  type="number"
+                  id="guest-count"
+                  name="guestCount"
+                  required
+                  min="1"
+                  max="10"
+                  step="1"
+                  placeholder="2"
+                />
+                <p class="reservation-form__error" id="guest-count-error" aria-live="polite"></p>
+              </div>
+
+              <div class="reservation-form__field">
+                <label class="reservation-form__label" for="dog-count">Dogs Joining</label>
+                <input
+                  class="reservation-form__input"
+                  type="number"
+                  id="dog-count"
+                  name="dogCount"
+                  required
+                  min="0"
+                  max="6"
+                  step="1"
+                  placeholder="1"
+                />
+                <p class="reservation-form__error" id="dog-count-error" aria-live="polite"></p>
+              </div>
+
+              <div class="reservation-form__field reservation-form__field--full">
+                <label class="reservation-form__label" for="special-notes">Special Notes</label>
+                <textarea
+                  class="reservation-form__input reservation-form__input--textarea"
+                  id="special-notes"
+                  name="specialNotes"
+                  rows="4"
+                  maxlength="500"
+                  placeholder="Allergies, accessibility requests, or anything we should know"
+                ></textarea>
+                <p class="reservation-form__error" id="special-notes-error" aria-live="polite"></p>
+              </div>
+            </div>
+
+            <div class="reservation-form__actions">
+              <button class="reservation-form__submit" type="submit">Request Reservation</button>
+              <p
+                class="reservation-form__status"
+                id="reservation-form-status"
+                aria-live="polite"
+              ></p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="visit" aria-labelledby="visit-heading">
+      <div class="site-footer__inner">
+        <h2 class="site-footer__title" id="visit-heading">Visit Barkside Dog Café</h2>
+
+        <div class="site-footer__columns">
+          <section class="site-footer__column" aria-labelledby="hours-heading">
+            <h3 class="site-footer__column-title" id="hours-heading">Hours</h3>
+            <ul class="site-footer__list">
+              <li class="site-footer__list-item">Mon–Thu: 7:00 AM – 7:00 PM</li>
+              <li class="site-footer__list-item">Fri–Sat: 7:00 AM – 9:00 PM</li>
+              <li class="site-footer__list-item">Sunday: 8:00 AM – 6:00 PM</li>
+            </ul>
+          </section>
+
+          <section class="site-footer__column" aria-labelledby="location-heading">
+            <h3 class="site-footer__column-title" id="location-heading">Location</h3>
+            <address class="site-footer__address">
+              214 Wharf Street<br />
+              Victoria, BC V8W 1T8<br />
+              <a class="site-footer__contact-link" href="tel:+12505550129">+1 (250) 555-0129</a
+              ><br />
+              <a class="site-footer__contact-link" href="mailto:hello@barksidecafe.ca"
+                >hello@barksidecafe.ca</a
+              >
+            </address>
+          </section>
+
+          <section class="site-footer__column" aria-labelledby="social-heading">
+            <h3 class="site-footer__column-title" id="social-heading">Socials</h3>
+            <!-- Placeholder social links pending real profile URLs -->
+            <ul class="site-footer__socials" aria-label="Social media links">
+              <li class="site-footer__social-item">
+                <a class="site-footer__social-link" href="#" aria-label="Instagram">Instagram</a>
+              </li>
+              <li class="site-footer__social-item">
+                <a class="site-footer__social-link" href="#" aria-label="TikTok">TikTok</a>
+              </li>
+              <li class="site-footer__social-item">
+                <a class="site-footer__social-link" href="#" aria-label="Facebook">Facebook</a>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <p class="site-footer__copyright">© 2026 Barkside Dog Café. Crafted in Victoria, BC.</p>
+      </div>
+    </footer>
+  </body>
+</html>
